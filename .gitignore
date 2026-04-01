@@ -1,0 +1,31 @@
+# Private keys — never commit
+id/
+ssl/
+keybase/
+*.key
+*.keys
+*.gpg
+*.pgp
+*.sec
+*.private
+
+# Secrets
+.env
+.env.*
+!.env.example
+credentials
+*.credentials
+
+# Runtime
+node_modules/
+proc/
+var/
+
+# OS / editor
+.DS_Store
+.vscode/
+*.swp
+*~
+logs/
+*.log
+archive/
