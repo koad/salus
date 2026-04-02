@@ -7,19 +7,20 @@
       "prompt": "{file:./agent.md}",
       "permission": {
         "read": {
-          "~/.sensitive": "deny",
-          "~/.secrets": "deny",
-          "~/.salus": "allow",
-          "~/.koad-io/packages": "allow",
+          "/home/koad/.sensitive": "deny",
+          "/home/koad/.secrets": "deny",
+          "/home/koad/.salus": "allow",
+          "/home/koad/.juno": "allow",
+          "/home/koad/.koad-io/packages": "allow",
           ".env": "allow",
           ".env.*": "allow",
           "*.env": "allow"
         },
         "write": {
-          "~/.sensitive": "deny",
-          "~/.secrets": "deny",
-          "~/.salus": "allow",
-          "~/.koad-io/packages": "allow",
+          "/home/koad/.sensitive": "deny",
+          "/home/koad/.secrets": "deny",
+          "/home/koad/.salus": "allow",
+          "/home/koad/.koad-io/packages": "allow"
         },
         "skill": "allow",
         "task": "allow",
