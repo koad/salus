@@ -3,5 +3,9 @@
   "name": "Salus",
   "role": "healer",
   "avatar": "avatar.png",
-  "buttons": []
+  "buttons": [
+    { "label": "Heal", "action": "heal", "description": "Run daily heal on all entities" },
+    { "label": "Report", "action": "report", "description": "View latest heal report" },
+    { "label": "Status", "action": "status", "description": "Entity health summary" }
+  ]
 }
