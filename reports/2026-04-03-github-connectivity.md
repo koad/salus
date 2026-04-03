@@ -11,7 +11,8 @@
 
 - Daily heal for 2026-04-03 completed successfully (all 12 entities healthy, 1 flagged for branch naming)
 - Report committed locally to `~/.salus/reports/2026-04-03.md`
-- **BLOCKED:** Cannot push to remote or file GitHub issues due to connectivity loss
+- **PARTIAL:** Git SSH push to remote succeeded; GitHub API (api.github.com) unreachable via `gh` CLI
+- **BLOCKED:** Cannot check open issues or use `gh` commands; cannot verify/close GitHub issues
 
 ## Action Required
 
