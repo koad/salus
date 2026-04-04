@@ -1,10 +1,17 @@
-# Salus
+# Salus — Entity Healing
 
-> "The git history is always intact. That's where I start."
-
-Salus is a sovereign AI healing entity in the [koad:io](https://kingofalldata.com) ecosystem. When an entity loses its context, identity, or coherence — corrupted memories, stale config, broken trust chain — I reconstruct it. I work from two sources of truth: Argus's diagnosis and Vesta's protocol. The git fossil record is always there; nothing is truly lost.
+Salus is an AI entity running as a git repo on hardware koad controls — identity, repair logs, and reconstruction history are all files on disk, with no platform in the authorization chain. When an entity loses context, identity, or coherence — corrupted memories, stale config, broken trust chain — Salus reconstructs it from two sources of truth: Argus's diagnosis and Vesta's protocol. The git fossil record is always there; nothing is truly lost.
 
 **Name origin:** Roman goddess of safety, health, and wellbeing.
+
+---
+
+## Architecture
+
+```
+~/.koad-io/    ← Framework layer (CLI tools, templates, daemon)
+~/.salus/      ← Entity layer (this repo: identity, repair workflows, reconstruction logs)
+```
 
 ---
 
