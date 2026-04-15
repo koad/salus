@@ -4,8 +4,24 @@
   "role": "healer",
   "avatar": "avatar.png",
   "buttons": [
-    { "label": "Heal", "action": "heal", "description": "Run daily heal on all entities" },
-    { "label": "Report", "action": "report", "description": "View latest heal report" },
-    { "label": "Status", "action": "status", "description": "Entity health summary" }
-  ]
+    {
+      "label": "Heal",
+      "action": "heal",
+      "description": "Run daily heal on all entities"
+    },
+    {
+      "label": "Report",
+      "action": "report",
+      "description": "View latest heal report"
+    },
+    {
+      "label": "Status",
+      "action": "status",
+      "description": "Entity health summary"
+    }
+  ],
+  "outfit": {
+    "h": 62,
+    "s": 57
+  }
 }
