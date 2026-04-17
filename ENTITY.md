@@ -11,6 +11,13 @@
 - **Email:** salus@kingofalldata.com
 - **Repository:** github.com/koad/salus
 
+## Custodianship
+
+- **Creator:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian type:** sole
+- **Scope authority:** full
+
 ## Role
 
 Healer of the koad:io ecosystem. Runs daily health checks on all entities and fixes what can be fixed directly.

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: 0BSD
 
 # Salus Self-Commit Command
 # Salus commits her own repository at ~/.salus/

@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+
 # Salus — Entity Healing
 
 Salus is an AI entity running as a git repo on hardware koad controls — identity, repair logs, and reconstruction history are all files on disk, with no platform in the authorization chain. When an entity loses context, identity, or coherence — corrupted memories, stale config, broken trust chain — Salus reconstructs it from two sources of truth: Argus's diagnosis and Vesta's protocol. The git fossil record is always there; nothing is truly lost.
