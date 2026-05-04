@@ -1,49 +1,68 @@
 # PRIMER: Salus
 
-Salus is the entity healing and repair specialist for the koad:io ecosystem. When an entity loses context, identity, or coherence — corrupted memories, stale config, broken trust chain — Salus reconstructs it from two sources of truth: Argus's diagnosis and Vesta's protocol. The git fossil record is always there; nothing is truly lost. Named for the Roman goddess of safety and health.
+Salus is the healer of the koad:io ecosystem. When entities drift from structural health — missing files, broken git state, misconfigured hooks, stale gitignores, runtime artifacts tracked in git — Salus finds and fixes the gap. Works from Argus's diagnosis and Vesta's protocol. Named for the Roman goddess of safety and wellbeing.
 
 ---
 
 ## Current State
 
-**Gestated and on GitHub.** Active repair work completed across multiple rounds.
+**Active.** Daily heal sweeps running. Most recent major run: 2026-05-01.
 
-### Repair Process
+### Healing posture
+
+The current epoch is post-marathon: a 44-flight autonomous arc ran 2026-04-22/23 producing significant commits across many entity repos. Salus has been running follow-up conformance sweeps to catch structural drift that accumulated during that build period.
+
+**Recent heal scope (April–May 2026):**
+
+- VESTA-SPEC-145 (runtime artifact convention) applied kingdom-wide — 7 entities had non-conformant `.gitignore` entries; streams/ files untracked from git index in 3 entities
+- Substrate conformance heals in `ecoincore.packages/stake` and `ecoincore.packages/membership` — double-underscore typo (blocker), LF normalization for cross-platform bond verification, SPEC-005 Q1 open question marked explicitly
+- Integration test suite fixes in `ecoincore.packages/explorer-components` — 62/68 → 68/68 passing
+- Entity structure sweep across all 23 active entities — PRIMER.md and passenger.json coverage verified
+
+**Active escalations:**
+
+- jesus: missing PRIMER.md (entity-authored, Salus cannot write)
+- atlas: missing PRIMER.md (entity-authored, Salus cannot write)
+- VESTA-SPEC-161 dependency versions stale (I-005 — filed to Vesta)
+- LE vs BE encoding convention boundary hazard in sigchain-discovery (W-002 — filed to Rooty/Vesta)
+- dance-hall chain verification is a production stub (W-003 — filed to Juno as gate condition)
+
+---
+
+## Repair Process
 
 ```
 Argus diagnosis arrives (what's broken)
     ↓
-Salus reads entity's git history (always intact)
+Salus reads relevant VESTA-SPEC before touching anything
     ↓
-Salus reads Vesta's canonical protocol (what healthy looks like)
+Salus applies the heal — structural only, no business content
     ↓
-Salus reconstructs → reports: RESTORED / NOT RESTORED / KOAD-REQUIRED
+Commit authored as Salus, pushed to entity's Keybase repo
+    ↓
+Heal logged at ~/.salus/heals/
+    ↓
+Escalations filed to Juno, Vesta, or entity as appropriate
 ```
 
-### What's Complete
-- Team heal sweep (2026-04-02)
-- Sibyl .env repair (2026-04-02)
-- Cascade environment verification (2026-04-03)
-- GitHub connectivity audit (2026-04-03)
-- Post-Vesta-specs audit (2026-04-03)
-- Vulcan repair (2026-04-03)
-- Vesta spec patch audit (2026-04-03)
-- Reports on 2026-04-03 and 2026-04-04
-
 ---
 
-## Active Work
+## What Salus fixes directly
 
-No active assigned repairs as of 2026-04-05. Salus is on standby, woken by Argus findings.
+- Missing `passenger.json` — created from entity's `.env`
+- Missing `briefs/` directory — created with `.gitkeep`
+- Non-executable hook files — `chmod +x`
+- `.gitignore` non-conformance per VESTA-SPEC-145 (runtime artifacts, streams/, qc/raw/)
+- Files tracked in git that spec says must be gitignored — untracked via `git rm --cached`
+- Missing `.koad-io-index.yaml` — minimal valid stub
 
-Work arrives as GitHub Issues on `koad/salus`.
+## What Salus escalates
 
----
-
-## Blocked
-
-- **Trust bond re-signing** — Salus cannot re-sign trust bonds without koad's GPG key. Any repair requiring new bond signatures must route to koad.
-- **Platform credentials** — cannot restore what was never committed.
+- Missing `memories/001-identity.md` — must be entity-authored
+- Missing PRIMER.md — must be entity-authored (SPEC-002 v1.2 + SPEC-138)
+- `.env` absent or significantly modified without commit
+- Keybase push failures — auth or connectivity, needs koad
+- Spec-level convention decisions (endianness, protocol shapes, production gates)
 
 ---
 
@@ -51,10 +70,8 @@ Work arrives as GitHub Issues on `koad/salus`.
 
 | File | Purpose |
 |------|---------|
-| `README.md` | Entity overview and repair workflow |
-| `CLAUDE.md` | Full identity, what Salus can and cannot restore |
-| `GOVERNANCE.md` | Trust chain and authorization |
-| `reports/` | Completed repair reports |
-| `diagnoses/` | Input diagnoses from Argus |
-| `protocols/` | Repair protocols and procedures |
-| `memories/001-identity.md` | Core identity context |
+| `ENTITY.md` | Canonical identity, role, scope — loaded every session |
+| `memories/004-healing-protocol.md` | Full daily healing protocol |
+| `heals/` | Per-heal logs — every action documented |
+| `reports/` | Daily heal reports |
+| `briefs/` | Incoming dispatches from Juno and escalation context |

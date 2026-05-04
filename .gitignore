@@ -22,3 +22,12 @@ mcp-needs-auth-cache.json
 
 # Runtime state
 var/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# .io files — signed visual artifacts (VESTA-SPEC-136)
+# These are PNGs with embedded signed payloads; not part of the public storefront.
+*.io
